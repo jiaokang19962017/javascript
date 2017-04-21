@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function username(name){//用户名
+				if(name.length==0){
+					alert("为空");
+					return false;
+				}
+				for(var i=0;i<name.length;i++){
+					// 获取指定下标的字符 charAt
+				 var c = name.charAt(i); // i (0~name.length-1)
+					if(!(c>=0 && c<=9)|(c>='a' && c<='z') | (c=='_')){
+					return false;
+					}
+					
+						
+					
+				}
+				//遍历name(123ab_c%##) 如果在(0~9 && a~z && _)里
+				return true;
+			}
+			/*alert(username("154s&"))*/
+			function password(pw){
+				if(isNaN(pw)){
+					return false;
+				}
+				if(pw.length>6 && pw.length<12){
+					return true;
+				}
+				return false;
+			}
+			
+			function sex(s){
+				if(s==null){
+					return false;
+				}
+				return true;
+			}
+			
+			function email(eml){
+				if(eml == null){
+					return false;
+				}
+				if(eml.indexOf("@") == -1){
+					return false;
+				}
+				if(eml.indexOf(".")==-1){
+					return false;
+				}
+				return true;
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

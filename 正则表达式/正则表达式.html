@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			var str1 = "str1234589564";
+			var s=str1.indexOf("r");
+			var last = str1.lastIndexOf("5")
+			var c = str1.charAt(6)
+			var ss =  str1.substring(3,6)
+			alert(s+"<br>"+last+" "+c+" "+ss)*/
+			
+			
+			var rep = "123ab8c9aaa()sda$";
+			var guize = /a/g;
+			var rs = rep.replace(guize,"A")
+			alert(rs);*/
+			
+			var str = "1";
+			//是否是数字
+			var reg = new RegExp("\\d"); //   \d
+			var reg1 = /^\d+&/               // \d数字,^从数字开始,并且重复一次或多次
+			var flag =  reg1.test(str);
+			 alert(flag);
+			 
+			 //用户名必须是字母或数字
+			 function yan(name){
+			 	var reg = /^[a-7A-Z0-9]+$/;
+			 	var flag = reg.test(name);
+			 	alert(flag);
+			 	
+			 }
+			 yan("toaj52666**56");
+			 
+			 var s1= "811708046qq.com";
+			 var reg2 =  /^[0-9a-zA-Z][0-9a-zA-Z_.-]{2,16}\w$/;  //a重复出现一次或多次
+			 var reg3 = /^(13|15|18)\d{9}&/;  // a重复出现0次或者多次
+			 var reg4 = /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/;
+			 alert(reg4.test(s1))
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

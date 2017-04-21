@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function display(){
+				var now = new Date();
+				var hours = now.getHours();
+				var minutes = now.getMinutes();
+				var seconds = now.getSeconds();
+				var content = document.getElementById("div1");
+				content.innerHTML = hours+":"+minutes+":"+seconds;
+			}
+			function time(){
+				window.setTimeout("display()","3000");
+			}
+			function ftime(){
+				window.setInterval("display()","1000");
+			}
+		</script>
+	</head>
+	<body onload="ftime()"> 
+	<div id="div1">time:</div>	
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+			</head>
+			<body> 
+		 <canvas id="canvas" width="500px" height="500px" style="background-color: yellow;">
+		 	<script type="text/javascript"> 
+		 	var canvas=document.getElementById("canvas");
+			var cxt=canvas.getContext("2d");
+			cxt.beginPath();
+			cxt.moveTo(250, 50);
+			cxt.lineTo(200, 200);
+			cxt.lineTo(300, 300);
+			cxt.closePath(); //填充或闭合 需要先闭合路径才能画
+			//空心三角形
+			cxt.strokeStyle="red";
+			cxt.stroke();
+			//实心三角形
+			</script> 
+			</canvas> 
+		 
+			</body> 
+			</html>

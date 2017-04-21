@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			button{
+				background-color: indianred;
+				border: 2px solid black;
+			}
+			div{
+				width: 50px;
+				height: 30px;
+				border: dashed 2px blue;
+				margin: 0 auto;
+				
+			}
+		</style>
+		<script type="text/javascript">
+		
+		/*	var add = function(a,b){
+				return a+b;
+			}
+			function hello(){
+				document.write("你好,世界");
+			}
+			var p = prompt("");
+			var s = prompt("");
+			var he = add(p,s);
+			document.write(he);
+			hello();*/
+			var add =  function(a){
+				for(i=0;i<a;i++){
+					document.write("^-^"+"<br>");
+				}
+			}
+			/*var hello = function(p,s){
+				for(i=0;i<=s;i++)
+				{
+					document.write("欢迎"+p);
+				}
+			}*/
+		/*	var p = prompt("请输入人名");
+			var s = prompt("请输入次数")
+			hello(p,s);
+			
+			var jisuanqi = function(a,b,d){
+				if(a<b){
+				d=a+b;
+				}else if(a>b){
+					d = a-b;
+				}
+				return d;
+			}
+			document.write(jisuanqi(12,8));*/
+			/*debugger*/
+			function getDate(){
+				return new Date();
+			}
+			
+		</script>
+	</head>
+	<body>
+		<button value="显示" onclick="javascript:document.write(getDate())">显示当前时间</button>
+		<div value = "点击" onkeydown="javascript:document(add(5))">双击我^-^</div>
+	</body>
+</html>
