@@ -1,26 +1,99 @@
 <!DOCTYPE html>
-<html>
-
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-			</head>
-			<body> 
-		 <canvas id="canvas" width="500px" height="500px" style="background-color: yellow;">
-		 	<script type="text/javascript"> 
-		 	var canvas=document.getElementById("canvas");
-			var cxt=canvas.getContext("2d");
-			cxt.beginPath();
-			cxt.moveTo(250, 50);
-			cxt.lineTo(200, 200);
-			cxt.lineTo(300, 300);
-			cxt.closePath(); //填充或闭合 需要先闭合路径才能画
-			//空心三角形
-			cxt.strokeStyle="red";
-			cxt.stroke();
-			//实心三角形
-			</script> 
-			</canvas> 
-		 
-			</body> 
-			</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>今日团购模块</title>
+    <style type="text/css" rel="stylesheet">
+        *{
+            margin:0px ;
+            padding:0px;
+            font-size: 12px ;
+        }
+        #pruduce{
+            width:948px ;
+            background-color: darkgray;
+        }
+        .top{
+            height:56px ;
+            background: url("images/top.jpg") no-repeat 10px 10px ;
+        }
+        .main{
+            text-align: center;
+            height:308px ;
+        }
+        .box{
+            width: 300px;
+            height:280px;
+            border:1px solid red;
+            margin:0px 6px ;
+            float: left;
+            cursor:pointer;
+        }
+        dl{
+            padding-top: 3px ;
+ 
+        }
+        dd{
+            line-height: 30px ;
+        }
+        div.btprice_1{
+            height:50px ;
+            background: yellow url("images/bt1.jpg")no-repeat 5px 4px ;
+        }
+ 
+        div.btprice_2{
+            height:50px ;
+            background: yellow url("images/bt2.jpg")no-repeat 5px 4px ;
+        }
+        div.btprice_3{
+            height:50px ;
+            background: yellow url("images/bt3.jpg")no-repeat 5px 4px ;
+        }
+        .hoverstyle{
+            background-color: darkblue;
+            color: white;
+        }
+ 
+ 
+    </style>
+    <script type="text/javascript " src="js/jquery-1.8.3.js"></script>
+    <script language="JavaScript">
+        $(document).ready(function () {
+            $(".box dl").mouseover(function () {
+                $(this).addClass('hoverstyle');
+            });
+            $(".box dl").mouseout(function () {
+                $(this).removeClass('hoverstyle');
+            });
+ 
+        });
+    </script>
+</head>
+<body>
+<div id="pruduce">
+     <div class="top"></div>
+    <div class="main">
+        <div class="box">
+            <dl>
+                <dt><img src="images/pic1.jpg" alt=""></dt>
+                <dd>[包邮]亮点可移动儿童防身高帖（每个ID限20）</dd>
+            </dl>
+            <div class="btprice_1"></div>
+        </div>
+        <div class="box">
+            <dl>
+                <dt><img src="images/pic2.jpg" alt=""></dt>
+                <dd>[包邮]韩国泡温泉游泳衣价达玛分教保守纤瘦大胸泳装</dd>
+            </dl>
+            <div class="btprice_2"></div>
+        </div>
+        <div class="box">
+            <dl>
+                <dt><img src="images/pic3.jpg" alt=""></dt>
+                <dd>[包邮]贵人鸟运动透气跑鞋P23423(每个限购5件)</dd>
+            </dl>
+            <div class="btprice_3"></div>
+        </div>
+    </div>
+     
+     

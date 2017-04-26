@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				font-family: "微软雅黑";
+			}
+			h1{
+				text-align: center;
+			}
+			p{
+				text-align: center;
+			}
+			table{
+				margin: 0 auto;
+			}
+			li{
+				list-style: none;
+				float: left;
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>添加新员工</h1>
+		<p>
+		name:<input type="text" id="name"  value="" />&nbsp;
+		email:<input type="text" id="email"  value="" />&nbsp;
+		salary:<input type="text" id="salary"  value="" />
+		<br />
+		<br />
+		<input type="submit" name="tijiao" id="tijiao" value="submit" />
+		<hr />
+		<ul id="myList" border="1px">
+			<li></li>
+		</ul>
+		</p>
+		<script type="text/javascript">
+			document.getElementById("tijiao").onclick = function(){
+				var newname = document.getElementById("name").value
+				var newemail = document.getElementById("email").value
+				var newsalary = document.getElementById("salary").value
+				var node1  =document.createElement("li");
+				
+				
+				var textnode = document.createTextNode(newname);
+				node1.appendChild(textnode);
+			
+				document.getElementById("myList").appendChild(node1);
+				
+				
+				var node1  =document.createElement("li");
+				
+				
+				var textnode = document.createTextNode(newemail);
+				node1.appendChild(textnode);
+				
+				document.getElementById("myList").appendChild(node1);
+				
+			
+				var node1  =document.createElement("li");
+				
+				var textnode = document.createTextNode(newsalary);
+				node1.appendChild(textnode);
+				document.getElementById("myList").appendChild(node1);
+				
+				
+			}
+		</script>
+	</body>
+</html>

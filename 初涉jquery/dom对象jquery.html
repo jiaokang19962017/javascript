@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dom对象和jquery对象的关系</title>
+		<script type="text/javascript">
+			function getdomobject(){
+				var id1 =  document.getElementById("id1");
+				var html =  id1.innerHTML;
+			}
+			//jquery实现
+			function getjquery(){
+			var $id1 =  $("#id1");  //jquery对象
+			var html = $id1.html();
+			}
+		</script>
+	</head>
+	<body>
+		<h2>dom树</h2>
+		<p title="选择你喜欢的水果">你喜欢的水果是什么:</p>
+		<ul id="id1">
+			<li>苹果</li>
+			<li>橘子</li>
+			<li>香蕉</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.css"/>
+		<title>你最喜欢的明星</title>
+		<script type="text/javascript">
+			function showvalue(){
+				var names =  document.getElementsByName("name1");
+				var name = names[0];
+				alert(name.value);	
+			}
+			debugger
+			function showTag(){
+				var s =  document.getElementsByTagName("*");
+				var ul = document.getElementsByTagName("p")
+				alert(ul[0].innerHTML);
+				var p1 = document.getElementsByClassName("c1");
+				alert(p1[0].innerHTML)
+			}
+			function showArr(){
+				var names = document.getElementsByName("name1");
+				var name = names[0];
+				var oldname = name.getAttribute("value");
+				alert(oldname);
+				//name.setAttribute("value","张学友");
+				name.value = "五月天";
+			}
+			function showall(){
+				var all = document.getElementsByTagName("body")[0];
+				var vslem = all.childNodes;
+				alert(vslem.length);
+				var ul = vslem[5];
+				alert(ul.length);
+				var lis = ul.childNodes;
+				alert(lis.length);
+			}
+			function nt(){
+				var txt = "";
+				var c = document.body.childNodes;
+				for(i=0;i<c.length;i++)
+				{
+				txt=txt + c[i].nodeType + "<br>";	
+				};
+				var x=document.getElementsByTagName("body"); 
+				x.innerHTML=txt;
+}
+			////////////另一章节//////////////////////////////////////
+			function addendChild(){
+				var newp = document.createElement("p");
+				var hello = document.createTextNode("hello,world");
+				//把文本节点方法p标签里
+				newp.appendChild(hello);
+				document.body.appendChild(newp);
+			}
+			function replacechild(){
+				//获取父元素
+				var ul=  document.getElementById("ul1");
+				//ul.replaceChild("新元素","被替换的元素");
+				var jay = document.getElementById("jay");
+				var zxy = document.getElementById("zxy");
+				ul.replaceChild(zxy,jay)
+			}
+			
+		</script>
+	</head>
+	<body>	
+		<h1>我最喜欢的明星</h1>
+		<p title="mystar" class="c1" id="id1" >我最喜欢的明星有:</p>
+		<ul id="ul1">
+			<li id="jay">周杰伦</li>
+			<li id="zxy">张学友</li>
+			<li>刘德华</li>
+		</ul>
+		<from action = "#">
+			<input type="text" name="name1"  value="周杰伦" /><br />
+			<input type="submit" value="提交" onclick="javascript:showvalue()" />
+		</from>
+		<button onclick="showArr()">设置属性,同时获取之前的属性值</button><br />
+		<a href="javascript:showTag();">getElementsByTagName</a>
+		<button onclick="showall()">获取全部</button>
+		<button onclick="nt()">打印节点</button><br />
+		
+		
+		<button onmousemove="addendChild()">点击插入新的</button>
+		<button onclick="replacechild()">替换新的</button>
+	<!--	<script type="text/javascript">
+		
+			var s = document.getElementById("id1");
+			alert(s)
+		
+		</script>-->
+	</body>
+</html>
