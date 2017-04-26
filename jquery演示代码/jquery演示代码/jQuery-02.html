@@ -13,11 +13,43 @@
     		$("#btn1").click(function(){
     		$("body ul").css("background","orangered")
     		});
-    		
+    				//绑定按钮事件body下属的ul元素
     		$("#btn2").click(function(){
     		$("body > ul").css("background","royalblue")
     		});
-    		//
+    
+    	  $("#btn3").click(function(){
+    		$("#menu1 > ul").css("background","cornflowerblue")
+    		});
+    		
+    		  $("#btn4").click(function(){
+    		$("#menu1 + li").css("background","red")
+    		});
+    		
+    		  $("#btn5").click(function(){
+    		$("#menu2 ~ li").css("background","lightseagreen")
+    		});
+    		///////////////////////////////////////////////////////
+    		
+    		 $("#btn6").click(function(){
+    		$("#menu1").next().css("background","lightseagreen")
+    		});
+    		
+    		 $("#btn7").click(function(){
+    		$("#menu2").nextAll().css("background","lightseagreen")
+    		});
+    		/////////////////////////////////children parents parent//////
+    		 $("#btn8").click(function(){
+    		$("#li3").parent().css("background","lightseagreen")
+    		});
+    		
+    		
+    		 $("#btn9").click(function(){
+    		$("#li3").parents().css("background","lightseagreen")
+    		});
+    		$("#btn").click(function(){
+    			 window.location.reload();
+    		})
     	});
     </script>
   </head>
@@ -34,13 +66,13 @@
 		</li>
 		<li>II
 			<ul>
-				<li>1</li>
-				<li>2</li>
+				<li>4</li>
+				<li>5</li>
 			</ul>
 		</li>
-		<li>III
+		<li id="li3">III
 			<ul>
-				<li>1</li>
+				<li>6</li>
 			</ul>
 		</li>
 	</ul>
@@ -50,5 +82,14 @@
 	$("#menu1>ul")<button id="btn3">改变背景</button></br>
 	$("#menu1+li")<button id="btn4">改变背景</button></br>
 	$("#menu2~li")<button id="btn5">改变背景</button></br>
+	
+	
+	$("#menu1").next()<button id="btn6">改变背景</button></br>
+	$("#menu2"),nextAll()<button id="btn7">改变背景</button></br>
+	
+		$("#li3").parent()<button id="btn8">改变背景</button></br>
+    $("#li3").parents()<button id="btn9">改变背景</button></br>
+		$("#menu1").children<button id="btn10">改变背景</button></br>
+
   </body>
 </html>

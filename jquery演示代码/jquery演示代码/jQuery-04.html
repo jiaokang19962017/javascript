@@ -6,6 +6,21 @@
     <meta name="keywords" content="keyword1,keyword2,keyword3">
     <meta name="description" content="this is my page">
     <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		//$("div:first");
+    		$("[title='p1']").css("color","royalblue");
+    		
+    		$("p:last").css("color","red")
+    		
+    		$("p:even").css("color","green")
+    		 
+    		 $("p:first").css("color","orange")
+    		 var $user = $("[value='haha']");
+    		 
+    	});
+    </script>
     
   </head>
   
@@ -23,7 +38,7 @@
 			<p>风雨不动安如山！</p>
 		</div>
 		<div>
-			<p>呜呼！</p>
+			<p  title="p1">呜呼！</p>
 		</div>
 		<div>
 			<p>何时眼前突兀见此屋，</p>
@@ -32,5 +47,6 @@
 			<p>吾庐独破受冻死亦足！</p>
 		</div>
 	</div>
+	<input type="text" name="username" id="username" value="haha" />
   </body>
 </html>

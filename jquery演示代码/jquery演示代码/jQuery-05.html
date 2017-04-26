@@ -6,6 +6,29 @@
     <meta name="keywords" content="keyword1,keyword2,keyword3">
     <meta name="description" content="this is my page">
     <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		//显示text输入框的值
+    		//checkbox的个数
+    		//密码框的值
+    		//input标签的个数
+    		$(":button").click(function(){
+    			var $text = $(":text").val();
+    		alert($text);
+    		})
+    		
+    		$("#btn11").click(function(){
+    			var $mima = $(":password").val();
+    			alert($mima);
+    		})
+    		var cb = $("#from1 :checkbox");
+    		alert("checkbox标签数:"+cb.length)
+    			
+    		var cip = $("#from1 :input");
+    		alert("input标签数:"+cip.length)
+    	});
+    </script>
     
 	</script>
   </head>
@@ -13,23 +36,23 @@
   <body>
   	<h3>表单选择器</h3> 
 	<form id="from1">
-		<input type="button" value="button"/></br>
+		<input type="button" value="文本框"/></br>
 		<input type="checkbox" name="c"/>1
 		<input type="checkbox" name="c"/>2
 		<input type="checkbox" name="c"/>3</br>
-		<input type="file"/></br>
+	<!--	<input type="file"/></br>
 		<input type="hidden" /><div style="display:none">test</div></br>
-		<input type="image" /></br>
+		<input type="image" /></br>-->
 		<input type="password" /></br>
-		<input type="radio" name="a" />1
+	<!--	<input type="radio" name="a" />1
 		<input type="radio" name="a" />2
 		<input type="radio" name="a" />3</br>
 		<input type="reset" /></br>
-		<input type="submit" value="提交" /></br>
+		<input type="submit" value="提交" /></br>-->
 		<input type="text" /></br>
 		<select><option>Option</option></select></br>
 		<textarea></textarea></br>
-		<button>Button</button>
+		<button id="btn11">密码框</button>
 	</form>
   </body>
 </html>

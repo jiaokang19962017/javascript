@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery-dom01.html</title>
+	<meta  http-equiv="content-type" content="text/html; charset=UTF-8">
+   
+     <style type="text/css">
+    .myclass1{
+    	color:red;
+    }
+    .myclass2{
+    	background:yellow;
+    }
+    
+    </style>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		var li = $("ul li:eq(1)");
+    		alert(li.text())
+    		//属性
+    		var attrvalue= $("p").attr("title");
+    		alert(attrvalue);
+    		
+    		var newapple = $("<li>苹果</li>");  //创建节点
+    		$("ul").append(newapple);// 把节点放到ul里面,默认在后面添加新节点
+    		
+    		var newbanana = $("<li>香蕉</li>");
+    		$("ul").prepend(newbanana) //默认在前面添加新节点
+    	})
+    </script>
+  </head>  
+  <body>
+    <h3>DOM树</h3>
+    <p title="选择你喜欢的水果">你最喜欢的水果是？</p>
+    <ul>
+    	<li>苹果</li>
+    	<li>桔子</li>
+    	<li>香蕉</li>
+    </ul>
+  </body>
+</html>
