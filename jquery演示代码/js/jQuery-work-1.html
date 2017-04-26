@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.red{
+				color: #FF0000;
+			}
+			.green{
+				color: #00FF00;
+			}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button :eq(0)").click(function(){
+					$("h1").css("color","red")
+				})
+				
+				$("button :eq(1)").click(function(){
+					$("h4").before("<p>作者</p>")
+				})
+				
+				$("button :eq(2)").click(function(){
+					var sl = $("[class='red']");
+					alert("元素数量为:"+sl.length)	
+				})
+				
+				$("button :eq(3)").click(function(){
+					$("#auther").css("background","green")
+				})
+				
+				$("button :eq(4)").click(function(){
+					$('img').css({
+    						width : '300px',
+   	 						height: '500px'
+								})
+				})
+				
+				
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div id="con">
+			<h1>劝学</h1>
+			<h4 id="auther">朱熹</h4>
+			<p class="red">少年易老学难成，</p>
+			<p>一寸光阴不可轻。</p>
+			<p class="red">未觉池塘春草梦，</p>
+			<p>阶前梧叶已秋声。</p>
+		</div>
+		<button>设置h1标签为红色字体</button><br />
+		<button>设置h4标签title属性为“作者”</button><br />
+		<button>获取class为red的元素数量</button><br />
+		<button>设置id为auther的标签为green样式</button><br />
+		<button>设置图片大小为500X300</button><br />
+		<img src="img/1.png" />
+	</body>
+</html>

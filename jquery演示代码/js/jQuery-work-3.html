@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button :eq(0)").click(function(){
+					$("#con").append("<p id='c2'>忍者须臾待杜根</p>")	
+				})
+				$("button :eq(1)").click(function(){
+					$("#c2").before("<p id='c4'>去留肝胆两昆仑</p>")	
+				})
+				$("button :eq(2)").click(function(){
+					$("#c2").after("<p>望门投止思张俭</p>")	
+				})
+				$("button :eq(3)").click(function(){
+					$("#c4").before("<p>我自横刀向天笑</p>")	
+				})
+				$("button :eq(4)").click(function(){
+					$("h4").replaceWith("<h3>作者:谭嗣同</h3>")	
+				})
+				$("button :eq(5)").click(function(){
+					$("p").wrap("<div></div>")
+				})
+				$("button :eq(6)").click(function(){
+					$("#c4").remove();	
+				})
+					$("button :eq(7)").click(function(){
+					$("p").remove();	
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<h1>狱中题壁</h1>
+		<h4>谭嗣同 </h4>
+		<div id="con">
+			
+		</div><br />
+		<button>在"con"中插入p标签：忍死须臾待杜根；id为"c2"</button><br />
+		<button>在c2后插入p标签：去留肝胆两昆仑。id为"c4"</button><br />
+		<button>在c2前插入p标签：望门投止思张俭，</button><br />
+		<button>在c4前插入p标签：我自横刀向天笑，</button><br />
+		<button>用h3 "作者：谭嗣同"替换h4</button><br />
+		<button>用div标签包裹所有的p标签</button><br />
+		<button>删除id为c4标签</button><br />
+		<button>删除所有的p标签</button><br />
+	</body>
+</html>

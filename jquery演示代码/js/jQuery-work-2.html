@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.cls_1{
+				background: #FFFF00;
+				color: #FF0000;
+			}
+			.cls_2{
+				background: #FF00FF;
+				color: #FF0000;
+			}
+			.cls_3{
+				background: #00FFFF;
+				border: 1px solid #0000FF;
+			}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button :eq(0)").click(function(){
+					$("#con").addClass("cls_3");
+				})
+				$("button :eq(1)").click(function(){
+					$("h1").addClass("cls_2")
+				})
+				$("button :eq(2)").click(function(){
+					$("h1").addClass("cls_1")
+				})
+				$("button :eq(3)").click(function(){
+					$("p").css("color","red")
+				})
+				$("button :eq(4)").click(function(){
+					$("#info").appendTo("#con")
+				})
+				$("button :eq(5)").click(function(){
+					$("#info").appendTo("#title")
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="con">
+			<h1 id="title" >宣州谢脁楼饯别校书叔云</h1>
+			<h4>李白</h4>
+			<p>弃我去者， 昨日之日不可留；</p>
+			<p>乱我心者， 今日之日多烦忧。</p>
+			<p>长风万里送秋雁， 对此可以酣高楼。</p>
+			<p>蓬莱文章建安骨， 中间小谢又清发。</p>
+			<p>俱怀逸兴壮思飞， 欲上青天揽明月。</p>
+			<p>抽刀断水水更流， 举杯消愁愁更愁。</p>
+			<p>人生在世不称意， 明朝散发弄扁舟。</p>
+		</div>
+		<div id="info"></div>
+		<button>ID为"con"标签使用cls_3</button><br />
+		<button>h1标签使用样式cls_2</button><br />
+		<button>h1标签追加样式cls_1</button><br />
+		<button>将所有p标签的颜色设置为#205123</button><br />
+		<button>将id为con的标签HTML代码，写入id为info的div中</button><br />
+		<button>将id为title的标签文本，写入id为info的div中</button><br />
+	</body>
+</html>
