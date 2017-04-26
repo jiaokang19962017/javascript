@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta charset="UTF-8">
+    
+    
+  </head>
+  
+  <body>
+	<h3 id="title">层次选择器</h3>
+	<ul>
+		<li id="menu1">I
+			<ul>
+				<li id="menu2">1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</li>
+		<li id="menuII">II
+			<ul>
+				<li>1</li>
+				<li>2</li>
+			</ul>
+		</li>
+		<li>III
+			<ul>
+				<li>1</li>
+			</ul>
+		</li>
+	</ul>
+	<button id="btn">恢复</button></br>
+	$("#menu1+li")<button id="btn1">改变背景</button></br>
+	next()<button id="btn2">改变背景</button></br>
+	$("#menu2~li")<button id="btn3">改变背景</button></br>
+	nextAll()<button id="btn4">改变背景</button></br>
+	siblings()<button id="btn5">改变背景</button></br>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery-01.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    	$(function(){
+    		//id选择器,改变文字颜色  css()函数改变样式
+    		$("#title").css("color","royalblue");
+ 				//html();相当于innerHTML
+ 				//获取了样式名为info的所有元素,之后调用html()函数改变内容,再调用css()改变内容颜色.链式操作
+ 				$(".info").html("开发二班 基本选择器").css("color","royalblue");
+ 				//标签选择器
+ 				//1.onclick绑定事件,在浏览器中高数鼠标点击时,做什么
+ 				//2.click(),触发"某个"元素的onclick事件
+ 				$("button").click(function(){
+ 					$("#title").css("color","coral")
+ 				}).dblclick(function(){
+ 					$(".info").css("color","green")
+ 				});
+ 				
+    	});
+    </script>
+  </head>
+  
+  <body>
+	<h3 id="title">基本选择器</h3>
+	<p class="info"></p>
+	<button>改变颜色</button>
+  </body>
+</html>
